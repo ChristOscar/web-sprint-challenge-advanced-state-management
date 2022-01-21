@@ -19,7 +19,7 @@ import Smurf from './Smurf';
     return(
         <div className="listContainer">
             {props.smurfs.map(smurf => {
-                return <Smurf smurf={smurf} />;
+                return <Smurf smurf={smurf} key={smurf.name}/>;
             })}
         </div>
     );

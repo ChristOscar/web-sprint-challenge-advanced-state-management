@@ -1,52 +1,51 @@
-import { FETCH_START,FETCH_SUCCESS, FETCH_FAIL,ADD_SMURF,SET_ERROR } from './../actions/index.js';
-
+import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL, ADD_SMURF, SET_ERROR } from '../actions/index';
 
 export const initialState = {
-    smurfs: [],
-    loading: false,
-    error: '',
+	smurfs: [],
+	loading: false,
+	error: '',
 }
 
-const reducer = ( state =  initialState, action )=>{
-    switch (action.type) {
-        case FETCH_START:
-            return {
-                ...state,
-                smurfs: [],
-                loading: true,
-                error: '',
-            };
-        case FETCH_SUCCESS:
-            return {
-                ...state,
-                smurfs: action.payload,
-                loading: false,
-                error: '',
-            };
-        case FETCH_FAIL:
-            return {
-                ...state,
-                smurfs: [],
-                loading: false,
-                error: action.payload,
-            };
-        case ADD_SMURF:
-            return {
-                ...state,
-                smurfs: [...state.smurfs, action.payload],
-                loading: false,
-                error: '',
-            };
-        case SET_ERROR:
-            return {
-                ...state,
-                smurfs: [],
-                loading: false,
-                error: action.payload,
-            }
-        default:
-            return state;
-    }
+const reducer = (state = initialState, action) => {
+	switch (action.type) {
+		case FETCH_START:
+			return {
+				...state,
+				smurfs: [],
+				loading: true,
+				error: '',
+			};
+		case FETCH_SUCCESS:
+			return {
+				...state,
+				smurfs: action.payload,
+				loading: false,
+				error: '',
+			};
+		case FETCH_FAIL:
+			return {
+				...state,
+				smurfs: [],
+				loading: false,
+				error: action.payload,
+			};
+		case ADD_SMURF:
+			return {
+				...state,
+				smurfs: [...state.smurfs, action.payload],
+				loading: false,
+				error: '',
+			};
+		case SET_ERROR:
+			return {
+				...state,
+				smurfs: [],
+				loading: false,
+				error: action.payload,
+			}
+		default:
+			return state;
+	}
 }
 
 //**************DO NOT EDIT ANY CODE BEYOND THIS POINT**************//
