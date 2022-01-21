@@ -15,9 +15,9 @@ You are not allowed to collaborate during the sprint challenge.
 In this challenge, you will build a Smurfs village database utilizing Redux as your state management system. Build this challenge from the ground up using what you have learned about state management.
 
 ## Project Setup
-* [ ] Run npm install to install your dependencies.
-* [ ] Run npm start to run your frontend and backend code automatically.
-* [ ] Note your backend code will run automatically when your run npm start. There is no need to separately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
+* [x] Run npm install to install your dependencies.
+* [x] Run npm start to run your frontend and backend code automatically.
+* [x] Note your backend code will run automatically when your run npm start. There is no need to separately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
 
 ## Project Instructions
 
@@ -112,9 +112,15 @@ In this project, you will build the reducer, actions and basic redux connects to
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What problem does the context API help solve?
+ - It helps makes passing state to your components super easy with just a few lines of code and has trickle down effect by wrapping your top components.
 
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+ - Store is like a changelog that documents state changes.
+ - Actions simply act as a messenger between your component and your reducer.
+ - Reducer is the machine that, given the same inputs, will always produce the same outputs. Makes it very predictable 
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+ - Thunk is a piece of middleware that allows you to use a function to intercept data before it heads to the reducer. Allowing you to     control the data that goes through. 
 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+  - Redux, Even though it it lacks simplicity in terms of set-up. It's not bad and you have a finer control over the data that is being passed. 
