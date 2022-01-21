@@ -1,3 +1,5 @@
+import { FETCH_START,FETCH_SUCCESS, FETCH_FAIL,ADD_SMURF,SET_ERROR } from './../actions/index.js';
+
 
 export const initialState = {
     smurfs: [],
