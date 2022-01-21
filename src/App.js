@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from 'react-redux';
 
 import AddForm from './components/AddForm';
@@ -14,7 +14,7 @@ import { fetchSmurfs } from "./actions";
 const App = ({dispatch})=> {
   useEffect(()=>{
     dispatch(fetchSmurfs());
-  }, []);
+  });
 
   return (
     <div className="App">
